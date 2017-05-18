@@ -790,7 +790,8 @@ func (v *Viper) BindPFlags(flags *pflag.FlagSet) error {
 	return v.BindFlagValues(pflagValueSet{flags})
 }
 
-// BindPFlag binds a specific key to a pflag (as used by cobra).
+// BindPFlag binds a specific key to a pflag (as used by cobra), allowing
+// access to the pflag value from viper's Get methods.
 // Example (where serverCmd is a Cobra instance):
 //
 //	 serverCmd.Flags().Int("port", 1138, "Port to run Application server on")

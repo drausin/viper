@@ -230,7 +230,8 @@ id := Get("id") // 13
 ### Working with Flags
 
 Viper has the ability to bind to flags. Specifically, Viper supports `Pflags`
-as used in the [Cobra](https://github.com/spf13/cobra) library.
+as used in the [Cobra](https://github.com/spf13/cobra) library. The `Pflag`
+value becomes available via `viper.Get` and its related methods.
 
 Like `BindEnv`, the value is not set when the binding method is called, but when
 it is accessed. This means you can bind as early as you want, even in an
